@@ -1,0 +1,145 @@
+:root {
+    --royal-blue: #0053BC;
+    --navy-blue: #002B5E;
+    --silver: #8D9093;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white; /* Change text color to white */
+    background: linear-gradient(to right, var(--royal-blue), var(--navy-blue)); /* Gradient background */
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    background-color: var(--navy-blue);
+    overflow: hidden;
+}
+
+    header nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap; 
+    }
+
+        header nav ul li {
+            float: left;
+        }
+
+            header nav ul li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                header nav ul li a:hover {
+                    background-color: var(--royal-blue);
+                }
+
+                
+                header nav ul li a img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 0px; 
+                }
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    min-height: 100vh; 
+    background-image: url('../images/basketballaction1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .hero {
+        height: 300px; 
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        max-height: 600px; 
+    }
+    
+}
+
+
+.contact-form {
+    background: var(--navy-blue);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+
+.btn {
+    background: var(--royal-blue);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+figure {
+    border: 1px solid #ddd; 
+    padding: 10px; 
+    margin: 10px 0; 
+}
+
+    figure img {
+        width: 50%; 
+        height: auto; 
+    }
+
+figcaption {
+    text-align: center; 
+    color: #666; 
+    font-style: italic; 
+}

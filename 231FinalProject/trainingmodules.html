@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Modules - Triple Threat Training</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .module {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .module::after {
+            content: " ▼";
+        }
+        .module-content {
+            display: none;
+            transition: height 0.6s ease;
+            border: 1px solid #fff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        main {
+            text-align: center;
+        }
+        iframe {
+            margin: 0 auto;
+            display: inline-block;
+            width: 45%;
+            height: 420px;
+            margin-right: 5%;
+        }
+        iframe:last-child {
+            margin-right: 0;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var modules = document.getElementsByClassName("module");
+            for (var i = 0; i < modules.length; i++) {
+                modules[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                        this.innerHTML = this.innerHTML.replace("▲", "▼");
+                    } else {
+                        content.style.display = "block";
+                        this.innerHTML = this.innerHTML.replace("▼", "▲");
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trainingmodules.html">Training Modules</a></li>
+                <li><a href="coachingtips.html">Coaching Tips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="your-instagram-url"><img src="images/instagram.svg" alt="Instagram"></a></li>
+                <li><a href="your-tiktok-url"><img src="images/tiktok.svg" alt="TikTok"></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Training Modules</h1>
+        
+        <section>
+            <h2 class="module">Mastering the Triple Threat Position</h2>
+            <div class="module-content">
+                <figure>
+                    <img src="images/kobeintriplethreat.jpg" alt="Kobe in Triple Threat Position">
+                    <figcaption>Fig.1 - Kobe Bryant demonstrating the Triple Threat Position.</figcaption>
+                </figure>
+                <p>Master the art of the Triple Threat position with our comprehensive module. This module covers everything from perfecting your stance to effectively using the position to outmaneuver your defender. Learn techniques to improve your shooting, passing, and dribbling from the Triple Threat position.</p>
+                <ul>
+                    <li>Stance: Learn the correct stance for the Triple Threat position.</li>
+                    <li>Shooting: Improve your shooting technique from the Triple Threat position.</li>
+                    <li>Passing: Learn how to make accurate passes from the Triple Threat position.</li>
+                    <li>Dribbling: Improve your dribbling skills from the Triple Threat position.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="module">Perfecting Your Shot Form</h2>
+            <div class="module-content">
+                <figure>
+                    <img src="images/shotformimage.jpg" alt="Perfect Shot Form">
+                    <figcaption>Fig.2 - Demonstrating the Perfect Shot Form.</figcaption>
+                </figure>
+                <p>This module emphasizes accuracy, consistency, and adaptability in various shooting scenarios.</p>
+                <ul>
+                    <li>Body Position: Learn the correct body position for shooting.</li>
+                    <li>Shooting Arm: Understand how to align your shooting arm for the perfect shot.</li>
+                    <li>Follow Through: Master the follow through to ensure accuracy and consistency.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="module">Lockdown Defense Techniques</h2>
+            <div class="module-content">
+                <figure>
+                    <img src="images/kawhidefense.jpg" alt="Kawhi Leonard Defense">
+                    <figcaption>Fig.3 - Kawhi Leonard demonstrating Lockdown Defense.</figcaption>
+                </figure>
+                <p>Boost your defensive prowess with our Lockdown Defense Techniques module. Dive into understanding defensive strategies, developing footwork, and making intelligent defensive plays. This module is perfect for players looking to enhance their understanding of the game and make smarter decisions under pressure.</p>
+                <ul>
+                    <li>Defensive Strategies: Understand the strategies used in basketball defense.</li>
+                    <li>Footwork: Improve your agility and quickness on the court.</li>
+                    <li>Defensive Plays: Learn how to make smart defensive plays under pressure.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Triple Threat Training</p>
+    </footer>
+</body>
+</html>

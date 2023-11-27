@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coaching Tips - Triple Threat Training</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tip {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+            .tip::after {
+                content: " ▼";
+            }
+
+        .tip-content {
+            display: none;
+            transition: height 0.6s ease;
+            border: 1px solid #fff;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        iframe {
+            margin: 0 auto;
+            display: inline-block;
+            width: 45%;
+            height: 420px; 
+            margin-right: 5%;
+        }
+
+            iframe:last-child {
+                margin-right: 0;
+            }
+    </style>
+    <script>
+        window.onload = function () {
+            var tips = document.getElementsByClassName("tip");
+            for (var i = 0; i < tips.length; i++) {
+                tips[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                        this.innerHTML = this.innerHTML.replace("▲", "▼");
+                    } else {
+                        content.style.display = "block";
+                        this.innerHTML = this.innerHTML.replace("▼", "▲");
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trainingmodules.html">Training Modules</a></li>
+                <li><a href="coachingtips.html">Coaching Tips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Coaching Tips</h1>
+
+        <section>
+            <h2 class="tip">Enhancing Player Skills</h2>
+            <div class="tip-content">
+                <p>Tips on individual skill development, including drills for improving shooting, passing, and dribbling.</p>
+                <ul>
+                    <li>Shooting Drills: Practice shooting from different positions on the court to improve accuracy.</li>
+                    <li>Passing Drills: Use passing drills to enhance precision and timing.</li>
+                    <li>Dribbling Drills: Dribbling drills can help improve ball handling skills and control.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="tip">Fostering Teamwork and Communication</h2>
+            <div class="tip-content">
+                <p>Strategies for building team chemistry, effective communication on and off the court, and resolving conflicts.</p>
+                <ul>
+                    <li>Team Building: Regular team building activities can help foster a sense of camaraderie and trust among players.</li>
+                    <li>Communication: Encourage open and honest communication among team members.</li>
+                    <li>Conflict Resolution: Have a clear process in place for resolving conflicts that may arise.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="tip">Strategic Game Planning</h2>
+            <div class="tip-content">
+                <p>Insights into planning for games, analyzing opponents, and adapting strategies during games.</p>
+                <ul>
+                    <li>Game Planning: Develop a game plan based on your team's strengths and weaknesses.</li>
+                    <li>Opponent Analysis: Study your opponents to understand their strategies and tactics.</li>
+                    <li>Adapting Strategies: Be ready to adapt your strategies during the game as needed.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="tip">Maintaining Mental and Physical Fitness</h2>
+            <div class="tip-content">
+                <p>Advice on mental preparation for games, stress management, and keeping players physically fit and injury-free.</p>
+                <ul>
+                    <li>Mental Preparation: Use techniques like visualization and goal setting to mentally prepare for games.</li>
+                    <li>Stress Management: Teach players stress management techniques to help them stay calm under pressure.</li>
+                    <li>Fitness and Injury Prevention: Regular fitness training and proper warm-up and cool-down routines can help prevent injuries.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Coaching Videos</h2>
+            <iframe src="https://www.youtube.com/embed/Lvc8lN6KEA0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/7g1JLGZmNKM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2023 Triple Threat Training</p>
+    </footer>
+</body>
+</html>
